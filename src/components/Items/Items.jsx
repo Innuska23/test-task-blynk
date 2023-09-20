@@ -1,17 +1,16 @@
-import PropTypes from 'prop-types';
+// import { useSelector } from 'react-redux';
+// import { useDispatch } from 'react-redux';
 import { DayryCard } from '../DayryCard';
 
 import styles from "./Items.module.css";
+import { ItemsForm } from './ItemsForm';
 
-export const Items = ({ children }) => {
+export const Items = () => {
     return (
         <DayryCard title='Items'>
-            <div className={styles.items}>{children}</div>
+            <div className={styles.items}>
+                <ItemsForm />
+            </div>
         </DayryCard>
     )
-
-};
-
-Items.propTypes = {
-    children: PropTypes.element.isRequired
 };
