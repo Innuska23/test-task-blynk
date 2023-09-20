@@ -3,11 +3,14 @@ import { PersistGate } from 'redux-persist/integration/react';
 
 import { persistor, store } from './redux/store.js';
 
+import { Dayry } from './components/Dayry';
+import "./index.css"
 
 export const App = () => {
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor}>
+        <Dayry />
       </PersistGate>
     </Provider>
   );

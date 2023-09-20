@@ -1,0 +1,31 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+  padding-left: 10px;
+}
+
+.title_container {
+  padding: 15px;
+  margin-left: 15px;
+  width: 15%;
+  background-color: var(--color-layout);
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+.title {
+  color: var(--color-white);
+  font-size: 2rem;
+}
+
+.text_layout {
+  color: var(--text-layout);
+  margin-top: 10px;
+}
+
+.layout_content {
+  width: 85%;
+}

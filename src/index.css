@@ -1,0 +1,30 @@
+:root {
+  --color-white: white;
+  --color-layout: #2b2f3e;
+  --text-layout: #5b5d63;
+  --color-gray: gray;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-700: 700;
+}
+
+body {
+  background-color: var(--color-white);
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: var(--fw-400);
+  width: 100%;
+  overflow-x: hidden;
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
