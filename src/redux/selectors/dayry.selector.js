@@ -7,7 +7,18 @@ export const selectItems = createSelector(
     state => state.items
 );
 
-export const selectComments = createSelector(
+export const selectComments = (itemId) => createSelector(
     selectDayryState,
-    state => state.comments
+    state => state.comments[itemId] || []
+);
+
+export const selectCommentsCount = (itemId) => createSelector(
+    selectDayryState,
+    state => state.comments[itemId]?.length || 0
+);
+
+
+export const selectSelectedItem = createSelector(
+    selectDayryState,
+    state => state.selectedItem || ''
 );

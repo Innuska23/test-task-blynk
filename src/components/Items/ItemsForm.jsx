@@ -1,23 +1,40 @@
-// import { useDispatch } from "react-redux";
-import { BUTTON_COLORS } from "../../constants";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+
+import { dayrySliceActions } from "../../redux/reducers/dayry.slice";
 import { Button } from "../Button";
+
+import { BUTTON_COLORS } from "../../constants";
+
 import styles from "./Items.module.css";
 
-
-// const onAddItems = id => {
-//     useDispatch(addItems(id));
-// };
-
 export const ItemsForm = () => {
+    const dispatch = useDispatch()
+
+    const [itemName, setItemName] = useState('');
+
+    const handleChange = (e) => {
+        setItemName(e.currentTarget.value);
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        dispatch(dayrySliceActions.addItems(itemName))
+        setItemName('')
+    };
+
     return (
-        <form className={styles.form}>
+        <form className={styles.form} onSubmit={handleSubmit}>
             <input className={styles.input}
+                value={itemName}
+                onChange={handleChange}
+                autoComplete="off"
                 type="text"
                 name="name"
                 placeholder="Type name here..."
-                pattern="^[a-zA-Za-яА-Я]+(([' -][a-zA-Za-яА-Я ])?[a-zA-Za-яА-Я]*)*$"
+                required
             />
-            <Button color={BUTTON_COLORS.PRIMARY}>Add New</Button>
+            <Button color={BUTTON_COLORS.PRIMARY} type="submit">Add New</Button>
         </form>
     )
 };

@@ -3,9 +3,16 @@
   --color-layout: #2b2f3e;
   --text-layout: #5b5d63;
   --color-gray: gray;
+  --color-danger: #dc3545;
+  --color-primary: #17a2b8;
+  --color-primary-hover: #138496;
+  --color-secondary: #007bff;
+  --color-secondary-hover: #0069d9;
+  --color-border-white: #ced4da;
+  --color-border-focus: #80bdff;
+  --color-active: deeppink;
+  --color-card: #f9f9f9;
   --fw-400: 400;
-  --fw-500: 500;
-  --fw-700: 700;
 }
 
 body {
@@ -27,4 +34,9 @@ h5,
 h6,
 p {
   margin: 0;
+}
+
+li,
+ul {
+  list-style: none;
 }

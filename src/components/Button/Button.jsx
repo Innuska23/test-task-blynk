@@ -11,6 +11,6 @@ export const Button = ({ children, color, ...props }) => {
 };
 
 Button.propTypes = {
-    children: PropTypes.element.isRequired,
+    children: PropTypes.oneOfType([PropTypes.element, PropTypes.string]).isRequired,
     color: PropTypes.oneOf(Object.values(BUTTON_COLORS))
 };
